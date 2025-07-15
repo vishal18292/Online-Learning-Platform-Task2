@@ -1,6 +1,7 @@
 # 📚 Online Learning Platform — CodTech Internship Task 2
 
-This is a fully responsive and interactive **eLearning platform** created by **Vishal Suthar** as part of the **Web Development Internship at CodTech IT Solutions**. **Mentor: Neela Santosh**
+This is a fully responsive and interactive **eLearning platform** created by **Vishal Suthar** as part of the **Web Development Internship at CodTech IT Solutions**. 
+**Mentor: Neela Santosh**
 
 > 🎯 **Task Objective:** Build an online learning interface that includes multiple sections such as Courses, Video Lessons, Quizzes, and Progress Tracking — all structured with clean UI and responsive design.
 
