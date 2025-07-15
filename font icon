@@ -1,0 +1,15 @@
+
+<!-- Menu Icon -->
+<i class="fas fa-bars" id="menu-btn"></i>
+
+<!-- Close Icon -->
+<i class="fas fa-xmark" id="menu-close" style="display: none;"></i>
+
+<!-- Quiz Star Icon -->
+<i class="fas fa-star"></i>
+
+<!-- Contact Envelope Icon -->
+<i class="fas fa-envelope"></i>
+
+<!-- Progress Check Icon -->
+<i class="fas fa-check-circle"></i>

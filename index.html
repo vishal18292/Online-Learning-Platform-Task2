@@ -1,0 +1,237 @@
+<!-- Task 2: Online Learning Platform -->
+<!-- Created by Vishal Suthar | B.Tech CSE, Sir Padampat Singhania University | CodTech Internship -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SkillUp – Learn Smarter</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="font-icons.css" />
+
+  <!-- GSAP -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+</head>
+
+<body>
+
+<!-- Navigation -->
+<nav>
+  <img src="./assets/images/eLearning_logo.png" alt="SkillUp Logo" />
+  <div class="navigation">
+    <ul>
+      <i id="menu-close" class="fa-sharp fa-regular fa-circle-xmark"></i>
+      <li><a href="#">Home</a></li>
+      <li><a href="#features">Why Us</a></li>
+      <li><a href="#course">Courses</a></li>
+      <li><a href="#video-lessons">Lessons</a></li>
+      <li><a href="#quizzes">Test Yourself</a></li>
+      <li><a href="#progress">Progress</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <img id="profile-btn" src="./assets/images/user-icon.svg" alt="Profile" />
+    <img id="menu-btn" src="./assets/images/menu-icon.svg" alt="Menu" />
+  </div>
+</nav>
+
+<!-- Hero Section -->
+<section id="home" class="hero-section">
+  <div class="hero-overlay"></div>
+  <div class="hero-container">
+    <div class="hero-text">
+      <h1>Learn Smarter, Rise Higher</h1>
+      <p>SkillUp helps you master real-world skills with hands-on projects, interactive lessons, and expert support — anytime, anywhere.</p>
+      <div class="hero-buttons">
+        <a href="#course" class="hero-btn primary">Start Learning</a>
+        <a href="#quizzes" class="hero-btn outline">Take a Quiz</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<!-- Features Section -->
+<section id="features">
+  <h1>Why Choose SkillUp?</h1>
+  <div class="feature-base">
+
+    <div class="feature-box">
+      <i class="fa-solid fa-video"></i>
+      <h3>Interactive Learning</h3>
+      <p>Experience smooth HD video lessons that keep you engaged and focused.</p>
+    </div>
+
+    <div class="feature-box">
+      <i class="fa-solid fa-user-lock"></i>
+      <h3>Secure Accounts</h3>
+      <p>Your data, progress, and preferences are safely stored and personalized.</p>
+    </div>
+
+    <div class="feature-box">
+      <i class="fa-solid fa-chart-line"></i>
+      <h3>Progress Tracking</h3>
+      <p>Know how far you’ve come with real-time course progress visualizations.</p>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- Courses Section -->
+<section id="course">
+  <h1>Our Popular Courses</h1>
+  <div class="course-box">
+
+    <!-- Web Development Course -->
+    <div class="courses">
+      <img src="./assets/images/Web_Development.jpg" alt="Web Development" />
+      <div class="details">
+        <h6>Web Development Masterclass</h6>
+        <span>₹399</span>
+        <p>Build stunning websites with HTML, CSS, JavaScript and modern frameworks.</p>
+      </div>
+    </div>
+
+    <!-- Data Science Course -->
+    <div class="courses">
+      <img src="./assets/images/data_science.jpg" alt="Data Science" />
+      <div class="details">
+        <h6>Data Science with Python</h6>
+        <span>₹499</span>
+        <p>Analyze data, visualize insights, and build machine learning models from scratch.</p>
+      </div>
+    </div>
+
+    <!-- App Development Course -->
+    <div class="courses">
+      <img src="./assets/images/app_development.jpg" alt="App Development" />
+      <div class="details">
+        <h6>App Development for Android</h6>
+        <span>₹449</span>
+        <p>Learn to create modern Android apps using Java and Kotlin with real projects.</p>
+      </div>
+    </div>
+
+    <!-- Cloud Computing Course -->
+    <div class="courses">
+      <img src="./assets/images/cloud.jpg" alt="Cloud Computing" />
+      <div class="details">
+        <h6>Cloud Computing Essentials</h6>
+        <span>₹399</span>
+        <p>Understand cloud infrastructure, services, and deployment with hands-on labs.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- Video Lessons -->
+<section id="video-lessons">
+  <h1>Featured Lessons</h1>
+  <div class="lesson-box">
+    <video width="500" controls>
+      <source src="./assets/videos/lesson1.mp4" type="video/mp4" />
+      Your browser does not support HTML5 video.
+    </video>
+    <video width="500" controls>
+      <source src="./assets/videos/lesson2.mp4" type="video/mp4" />
+      Your browser does not support HTML5 video.
+    </video>
+  </div>
+</section>
+
+<!-- Quizzes Section -->
+<section id="quizzes">
+  <h1>Quick Knowledge Check</h1>
+  <form id="quiz-form">
+    <label>1. What does HTML stand for?</label><br>
+    <input type="radio" name="q1" value="a"> Hyper Text Markup Language<br>
+    <input type="radio" name="q1" value="b"> High Transfer Machine Language<br>
+    <input type="radio" name="q1" value="c"> Home Tool Meta Language<br><br>
+
+    <label>2. Which of these is a JavaScript framework?</label><br>
+    <input type="radio" name="q2" value="a"> Django<br>
+    <input type="radio" name="q2" value="b"> Angular<br>
+    <input type="radio" name="q2" value="c"> Flask<br><br>
+
+    <label>3. What is the default port for HTTP?</label><br>
+    <input type="radio" name="q3" value="a"> 443<br>
+    <input type="radio" name="q3" value="b"> 22<br>
+    <input type="radio" name="q3" value="c"> 80<br><br>
+
+    <button type="button" onclick="checkQuiz()">Submit Quiz</button>
+  </form>
+  <p id="quiz-result"></p>
+</section>
+
+<!-- Progress Section -->
+<section id="progress">
+  <h1>Your Learning Progress</h1>
+  <p>Monitor how far you've come in each course:</p>
+
+  <div class="progress-container">
+
+    <div class="progress-item">
+      <label for="progress-web">Web Development</label>
+      <progress id="progress-web" value="75" max="100"></progress>
+      <span class="progress-value">75%</span>
+    </div>
+
+    <div class="progress-item">
+      <label for="progress-data">Data Science</label>
+      <progress id="progress-data" value="50" max="100"></progress>
+      <span class="progress-value">50%</span>
+    </div>
+
+    <div class="progress-item">
+      <label for="progress-app">App Development</label>
+      <progress id="progress-app" value="30" max="100"></progress>
+      <span class="progress-value">30%</span>
+    </div>
+
+  </div>
+</section>
+
+<!-- Contact Section -->
+<section id="contact">
+  <h1>Contact Support</h1>
+  <form>
+    <input type="text" placeholder="Your Name" required /><br>
+    <input type="email" placeholder="Your Email" required /><br>
+    <textarea placeholder="Your Message" required></textarea><br>
+    <button type="submit">Send Message</button>
+  </form>
+</section>
+
+<!-- Footer -->
+<footer>
+  <p>&copy; 2025 SkillUp | Designed by Vishal Suthar (SPSU, Udaipur) for CodTech Internship</p>
+</footer>
+
+<!-- JS Scripts -->
+<script>
+  function checkQuiz() {
+    const q1 = document.querySelector('input[name="q1"]:checked')?.value;
+    const q2 = document.querySelector('input[name="q2"]:checked')?.value;
+    const q3 = document.querySelector('input[name="q3"]:checked')?.value;
+    let score = 0;
+    if (q1 === "a") score++;
+    if (q2 === "b") score++;
+    if (q3 === "c") score++;
+    document.getElementById("quiz-result").innerText = `Your score: ${score}/3`;
+  }
+
+  document.getElementById("menu-btn")?.addEventListener("click", () => {
+    document.querySelector("nav .navigation ul")?.classList.add("active");
+  });
+  document.getElementById("menu-close")?.addEventListener("click", () => {
+    document.querySelector("nav .navigation ul")?.classList.remove("active");
+  });
+</script>
+
+</body>
+</html>
